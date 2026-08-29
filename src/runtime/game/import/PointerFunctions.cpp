@@ -457,17 +457,17 @@ namespace ContentKeyRegister
 {
 	Pointer<IL2CPP::Object* ()> GetInstance(
 		"ContentKeyRegister",
-		0x47
+		0x4a
 	);
 
 	Pointer<IL2CPP::List<IL2CPP::String*>* (IL2CPP::Object* instance, OfferItemType type)> GetRegisterList(
 		"ContentKeyRegister",
-		0x54
+		0x57
 	);
 
 	Pointer<int(IL2CPP::Object* instance, OfferItemType type, IL2CPP::String* key)> GetItemIndex(
 		"ContentKeyRegister",
-		0x4f
+		0x52
 	);
 }
 
