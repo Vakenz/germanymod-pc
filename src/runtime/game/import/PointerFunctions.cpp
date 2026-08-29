@@ -283,8 +283,8 @@ namespace ProgressUpdater
 {
 	Pointer<IL2CPP::Object* ()> GetInstance(
 		"ProgressUpdater",
-		{ "internal", "Void", nullptr, {"Dictionary`2", "Int32"} },
-		5
+		{ "private static", "Void", nullptr, {"Dictionary`2"} },
+		1
 	);
 
 	Pointer<void(IL2CPP::Object* ths, IL2CPP::String* curName, int num, int num2, bool b1, bool b2, AnalyticsParamater params)> AddCurrency(
