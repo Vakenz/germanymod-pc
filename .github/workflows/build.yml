@@ -1,0 +1,24 @@
+name: Build Germany Mod
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure CMake
+        run: cmake -S . -B out/build/x64-Release -G "Visual Studio 17 2022" -A x64
+
+      - name: Build Release
+        run: cmake --build out/build/x64-Release --config Release --parallel
+
+      - name: Upload compiled files
+        uses: actions/upload-artifact@v4
+        with:
+          name: germanymod-windows-x64
+          path: out/build/x64-Release/
